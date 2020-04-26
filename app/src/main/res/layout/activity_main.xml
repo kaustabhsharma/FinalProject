@@ -32,10 +32,13 @@
 
     <ImageView
         android:id="@+id/ivBgContent"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:ignore="ContentDescription"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/bg_content"
-        tools:ignore="ContentDescription" />
+        android:visibility="visible"
+        android:contentDescription="@string/todo" />
 
     <com.budiyev.android.codescanner.CodeScannerView
         android:id="@+id/scannerView"

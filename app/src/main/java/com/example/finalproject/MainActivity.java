@@ -16,6 +16,7 @@ import android.app.AlertDialog;
 
 import android.os.Bundle;
 import android.widget.ImageView;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -46,8 +47,10 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
 
-        ivBgContent = findViewById(R.id.);
+        ivBgContent = findViewById(R.id.ivBgContent);
         scannerView = findViewById(R.id.scannerView);
+        ivBgContent.setImageResource(R.drawable.bg_content);
+
 
         ivBgContent.bringToFront();
 
