@@ -43,9 +43,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        BottomNavigationView navView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
 
         ivBgContent = findViewById(R.id.ivBgContent);
         scannerView = findViewById(R.id.scannerView);
@@ -54,12 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
         ivBgContent.bringToFront();
 
-        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
-                .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        NavigationUI.setupWithNavController(navView, navController);
+
         mCodeScanner = new CodeScanner(this, scannerView);
         mCodeScanner.setDecodeCallback(new DecodeCallback() {
             @Override
@@ -67,8 +59,14 @@ public class MainActivity extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        String message = "result :\n" + result.getText();
-                        showAlertDialog(message);
+                        if (result.getText().contains("https://docs.google.com/forms/")) {
+                            String message = "result :\n" + result.getText();
+                            showAlertDialog(message);
+                            //Intent required for next activity
+                        } else {
+                            showAlertDialog("This form link is invalid");
+
+                        }
                     }
                 });
             }
