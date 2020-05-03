@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         if (result.getText().contains("https://docs.google.com/forms/")) {
+                            //some google docs dont come with that kind of link so might want to check that
                             String message = "result :\n" + result.getText();
                             showAlertDialog(message);
                             //Intent required for next activity
