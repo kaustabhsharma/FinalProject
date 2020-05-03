@@ -1,6 +1,7 @@
 package com.example.finalproject;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -44,6 +45,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        if (checkFirstTime()) {
+            // Pass Activity to Register Page.
+        }
+
 
         ivBgContent = findViewById(R.id.ivBgContent);
         scannerView = findViewById(R.id.scannerView);
@@ -60,10 +65,11 @@ public class MainActivity extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        if (result.getText().contains("https://docs.google.com/forms/")) {
-                            String message = "result :\n" + result.getText();
-                            showAlertDialog(message);
-                            //Intent required for next activity
+
+                        if (result.getText().contains("form")) {
+                            Intent intent = new Intent(MainActivity.this, FormActivity.class);
+                            intent.putExtra("Json", result.getText());
+                            startActivity(intent);
                         } else {
                             showAlertDialog("This form link is invalid");
 
@@ -86,6 +92,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause() {
         mCodeScanner.releaseResources();
         super.onPause();
+    }
+
+    private boolean checkFirstTime() {
+        SharedPreferences savedInfo = getSharedPreferences("UserData", 0);
+        return (savedInfo.getBoolean("firstTime", true));
     }
 
     private void checkCameraPermission(){
