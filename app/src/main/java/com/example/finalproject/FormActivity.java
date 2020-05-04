@@ -8,6 +8,9 @@ import android.os.Bundle;
 import android.util.JsonReader;
 import android.view.View;
 import android.webkit.WebView;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,6 +22,8 @@ public class FormActivity extends AppCompatActivity {
     private String response = "";
     private JSONObject form;
     private SharedPreferences savedInfo;
+    EditText userDetail;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +58,18 @@ public class FormActivity extends AppCompatActivity {
             response = response + savedInfo.getString(input, "Default") + ", ";
         } else {
             // create a Edit Text in the Layout to get Data from the user.
+            Button submitInfo;
+            submitInfo = (Button)findViewById(R.id.buttonX);
+
+            TextView ask = (TextView)findViewById(R.id.textViewA);
+            ask.setText("Please enter your " + input);
+            submitInfo.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View view) {
+                   userDetail = (EditText)findViewById(R.id.editTextX);
+                }
+            });
+            response = response + userDetail.getText().toString();
+            //not sure what to do after this
         }
     }
 

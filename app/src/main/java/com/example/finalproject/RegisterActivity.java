@@ -20,6 +20,8 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        mButton = (Button)findViewById(R.id.button1);
+
         mButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 mEditUser   = (EditText)findViewById(R.id.editText1);
