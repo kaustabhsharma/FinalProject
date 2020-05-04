@@ -50,7 +50,7 @@ public class FormActivity extends AppCompatActivity {
 
     public void fill(String input) {
         if (savedInfo.contains(input)) {
-            response = response + savedInfo.getString("input", "Default") + ", ";
+            response = response + savedInfo.getString(input, "Default") + ", ";
         } else {
             // create a Edit Text in the Layout to get Data from the user.
         }

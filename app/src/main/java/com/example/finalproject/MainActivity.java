@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
+import android.content.SharedPreferences;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -43,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        if (checkFirstTime()) {
+            // Pass Activity to Register Page.
+        }
 
 
         ivBgContent = findViewById(R.id.ivBgContent);
@@ -64,13 +67,19 @@ public class MainActivity extends AppCompatActivity {
                             String message = "result :\n" + result.getText();
                             showAlertDialog(message);
                             //Intent required for next activity
-                        } else {
-                            showAlertDialog("This form link is invalid");
 
+                            if (result.getText().contains("form")) {
+                                Intent intent = new Intent(MainActivity.this, FormActivity.class);
+                                intent.putExtra("Json", result.getText());
+                                startActivity(intent);
+                            } else {
+                                showAlertDialog("This form link is invalid");
+
+                            }
                         }
                     }
                 });
-            }
+             }
         });
 
         checkCameraPermission();
@@ -88,6 +97,10 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
     }
 
+    private boolean checkFirstTime() {
+        SharedPreferences savedInfo = getSharedPreferences("UserData", 0);
+        return (savedInfo.getBoolean("firstTime", true));
+    }
     private void checkCameraPermission(){
         Dexter.withActivity(this)
                 .withPermission(Manifest.permission.CAMERA)
