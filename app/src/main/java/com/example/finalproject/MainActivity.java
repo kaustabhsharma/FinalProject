@@ -63,12 +63,8 @@ public class MainActivity extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        if (result.getText().contains("https://docs.google.com/forms/")) {
-                            String message = "result :\n" + result.getText();
-                            showAlertDialog(message);
-                            //Intent required for next activity
 
-                            if (result.getText().contains("form")) {
+                            if (result.getText().contains("Form")) {
                                 Intent intent = new Intent(MainActivity.this, FormActivity.class);
                                 intent.putExtra("Json", result.getText());
                                 startActivity(intent);
@@ -76,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                                 showAlertDialog("This form link is invalid");
 
                             }
-                        }
+
                     }
                 });
              }
