@@ -11,9 +11,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="Sign up"
+        android:text="SIGN UP"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#A4C639" />
+        android:textColor="#F44336" />
 
     <TextView
         android:id="@+id/textView2"

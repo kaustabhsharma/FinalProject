@@ -4,53 +4,110 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textViewA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="165dp"
-        android:layout_marginTop="26dp"
-        android:text="@string/app_name"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#0099FF" />
-
-    <TextView
-        android:id="@+id/textViewX"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewA"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="18dp"
-        android:layout_marginTop="74dp"
-        android:text="Enter here:"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#0099FF" />
-
-    <EditText
-        android:id="@+id/editTextX"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textViewX"
-        android:layout_marginLeft="40dp"
-        android:layout_marginBottom="-6dp"
-        android:layout_toRightOf="@+id/textViewX"
-        android:background="#CCCCCC"
-        android:ems="10"
-        android:inputType="textPersonName">
-
-        <requestFocus />
-    </EditText>
     <Button
         android:id="@+id/buttonX"
         android:layout_width="238dp"
         android:layout_height="35dp"
         android:layout_below="@+id/textView2"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginLeft="89dp"
         android:layout_marginTop="576dp"
+        android:layout_marginBottom="96dp"
         android:background="#0099FF"
         android:text="SUBMIT"
         android:textColor="#FFFFFF" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="1"
+        android:padding="20dip"
+        android:id="@+id/table">
+
+        <TableRow>
+            <TextView
+                android:text="NetID :"
+                android:padding="20dip"
+                android:id="@+id/field1"/>
+            <EditText
+                android:text=""
+                android:gravity="start"
+                android:padding="20dip"
+                android:id="@+id/ask1"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="NetID :"
+                android:padding="20dip"
+                android:id="@+id/field2"/>
+            <EditText
+                android:text=""
+                android:gravity="start"
+                android:padding="20dip"
+                android:id="@+id/ask2"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="NetID :"
+                android:padding="20dip"
+                android:id="@+id/field3"/>
+            <EditText
+                android:text=""
+                android:gravity="start"
+                android:padding="20dip"
+                android:id="@+id/ask3"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="NetID :"
+                android:padding="20dip"
+                android:id="@+id/field4"/>
+            <EditText
+                android:text=""
+                android:gravity="start"
+                android:padding="20dip"
+                android:id="@+id/ask4"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="NetID :"
+                android:padding="20dip"
+                android:id="@+id/field5"/>
+            <EditText
+                android:text=""
+                android:gravity="start"
+                android:padding="20dip"
+                android:id="@+id/ask5"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="NetID :"
+                android:padding="20dip"
+                android:id="@+id/field6"/>
+            <EditText
+                android:text=""
+                android:gravity="start"
+                android:padding="20dip"
+                android:id="@+id/ask6"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="NetID :"
+                android:padding="20dip"
+                android:id="@+id/field7"/>
+            <EditText
+                android:text=""
+                android:gravity="start"
+                android:padding="20dip"
+                android:id="@+id/ask7"/>
+        </TableRow>
+    </TableLayout>
 
 </RelativeLayout>
