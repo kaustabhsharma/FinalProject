@@ -24,7 +24,7 @@
         android:layout_below="@+id/textView1"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="43dp"
         android:text="Enter your name:"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#000116" />
@@ -51,7 +51,7 @@
         android:layout_below="@+id/textView1"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="163dp"
+        android:layout_marginTop="135dp"
         android:text="Enter your student email:"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#000116" />
@@ -77,7 +77,7 @@
         android:layout_below="@+id/textView1"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="291dp"
+        android:layout_marginTop="254dp"
         android:text="Enter your major:"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#000116" />
@@ -87,8 +87,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView3"
-        android:layout_marginLeft="19dp"
-        android:layout_marginBottom="-108dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginBottom="-99dp"
         android:layout_toRightOf="@+id/textView2"
         android:background="#CCCCCC"
         android:ems="10">
@@ -103,7 +103,7 @@
         android:layout_below="@+id/textView1"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="381dp"
+        android:layout_marginTop="336dp"
         android:text="Enter your date of birth(MM/DD/YYYY):"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#000116" />
@@ -114,7 +114,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView3"
         android:layout_marginLeft="19dp"
-        android:layout_marginBottom="-241dp"
+        android:layout_marginBottom="-222dp"
         android:layout_toRightOf="@+id/textView2"
         android:background="#CCCCCC"
         android:ems="10">
@@ -128,8 +128,8 @@
         android:layout_height="35dp"
         android:layout_below="@+id/textView2"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="81dp"
-        android:layout_marginTop="464dp"
+        android:layout_marginLeft="82dp"
+        android:layout_marginTop="398dp"
         android:background="#0099FF"
         android:text="SUBMIT"
         android:textColor="#FFFFFF" />
