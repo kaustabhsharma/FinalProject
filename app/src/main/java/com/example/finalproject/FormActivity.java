@@ -29,6 +29,7 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -64,6 +65,7 @@ public class FormActivity extends AppCompatActivity {
         } catch (Exception e) {
             showAlertDialog("Error,Try Again");
         }
+        param = new HashMap<>();
         read(form);
     }
 
@@ -72,7 +74,7 @@ public class FormActivity extends AppCompatActivity {
             JSONArray info = form.getJSONArray("Form");
             for (int i = 0; i < info.length(); i++) {
                 String field = info.getString(i);
-                getField(i).setText(field + " : ");
+                getField(i).setText(field);
                 fill(field, i);
             }
         } catch (Exception e) {
@@ -106,34 +108,34 @@ public class FormActivity extends AppCompatActivity {
 
     public void setUpTable() {
         ask1 = (EditText) findViewById(R.id.ask1);
-        ask1.setVisibility(View.INVISIBLE);
+        ask1.setVisibility(View.GONE);
         ask2 = (EditText) findViewById(R.id.ask2);
-        ask2.setVisibility(View.INVISIBLE);
+        ask2.setVisibility(View.GONE);
         ask3 = (EditText) findViewById(R.id.ask3);
-        ask3.setVisibility(View.INVISIBLE);
+        ask3.setVisibility(View.GONE);
         ask4 = (EditText) findViewById(R.id.ask4);
-        ask4.setVisibility(View.INVISIBLE);
+        ask4.setVisibility(View.GONE);
         ask5 = (EditText) findViewById(R.id.ask5);
-        ask5.setVisibility(View.INVISIBLE);
+        ask5.setVisibility(View.GONE);
         ask6 = (EditText) findViewById(R.id.ask6);
-        ask6.setVisibility(View.INVISIBLE);
+        ask6.setVisibility(View.GONE);
         ask7 = (EditText) findViewById(R.id.ask7);
-        ask7.setVisibility(View.INVISIBLE);
+        ask7.setVisibility(View.GONE);
 
         field1 = (TextView) findViewById(R.id.field1);
-        field1.setVisibility(View.INVISIBLE);
+        field1.setVisibility(View.GONE);
         field2 = (TextView) findViewById(R.id.field2);
-        field2.setVisibility(View.INVISIBLE);
+        field2.setVisibility(View.GONE);
         field3 = (TextView) findViewById(R.id.field3);
-        field3.setVisibility(View.INVISIBLE);
+        field3.setVisibility(View.GONE);
         field4 = (TextView) findViewById(R.id.field4);
-        field4.setVisibility(View.INVISIBLE);
+        field4.setVisibility(View.GONE);
         field5 = (TextView) findViewById(R.id.field5);
-        field5.setVisibility(View.INVISIBLE);
+        field5.setVisibility(View.GONE);
         field6 = (TextView) findViewById(R.id.field6);
-        field6.setVisibility(View.INVISIBLE);
+        field6.setVisibility(View.GONE);
         field7 = (TextView) findViewById(R.id.field7);
-        field7.setVisibility(View.INVISIBLE);
+        field7.setVisibility(View.GONE);
     }
 
     public EditText getAsk(int a) {
@@ -210,15 +212,13 @@ public class FormActivity extends AppCompatActivity {
         final ProgressDialog loading = ProgressDialog.show(this,"Adding Item","Please wait");
 
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "https://docs.google.com/spreadsheets/d/13_J5kXufZumPFNpdm5pWf0HHRLrZMaMdC57VODuusv4/edit#gid=0",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbwODUB-mSCxS32ILlzfDrWtdhie1Ganf-8KPrryXLi8tivJ6u2t/exec",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         loading.dismiss();
                         Toast.makeText(FormActivity.this, response,Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-                        startActivity(intent);
-
+                        finish();
                     }
                 },
                 new Response.ErrorListener() {

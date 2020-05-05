@@ -42,13 +42,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
         if (checkFirstTime()) {
             // Pass Activity to Register Page.
             Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
             startActivity(intent);
         }
 
+        setContentView(R.layout.activity_main);
 
         ivBgContent = findViewById(R.id.ivBgContent);
         scannerView = findViewById(R.id.scannerView);
@@ -69,9 +69,9 @@ public class MainActivity extends AppCompatActivity {
                             if (result.getText().contains("Form")) {
                                 Intent intent = new Intent(MainActivity.this, FormActivity.class);
                                 intent.putExtra("Json", result.getText());
-                                startActivity(intent);
+                                startActivityForResult(intent, 234);
                             } else {
-                                showAlertDialog("This form link is invalid");
+                                showAlertDialog("This form is invalid");
 
                             }
 

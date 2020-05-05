@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="5dp"
-    android:background="@drawable/login_background2">
+    android:background="@drawable/images">
 
     <TextView
         android:id="@+id/textView1"
@@ -15,7 +15,7 @@
         android:layout_marginTop="15dp"
         android:text="SIGN UP"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#FF0000" />
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/textView2"
@@ -128,8 +128,8 @@
         android:layout_height="35dp"
         android:layout_below="@+id/textView2"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="82dp"
-        android:layout_marginTop="398dp"
+        android:layout_marginLeft="79dp"
+        android:layout_marginTop="479dp"
         android:background="#0099FF"
         android:text="SUBMIT"
         android:textColor="#FFFFFF" />

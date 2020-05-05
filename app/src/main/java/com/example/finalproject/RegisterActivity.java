@@ -13,6 +13,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 public class RegisterActivity extends AppCompatActivity {
     Button mButton;
     EditText mEditUser;
@@ -55,8 +58,18 @@ public class RegisterActivity extends AppCompatActivity {
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         dialog.cancel();
-                        Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
-                        startActivity(intent);
+                        // Test.
+//                        JSONObject send = new JSONObject();
+//                        JSONArray sen = new JSONArray();
+//                        sen.put("Name");
+//                        sen.put("Email");
+//                        sen.put("Major");
+//                        try {
+//                            send.put("Form", sen);
+//                        } catch (Exception e) {
+//                            showAlertDialog("Error");
+//                        }
+                        finish();
                     }
                 });
 
