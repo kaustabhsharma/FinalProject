@@ -3,17 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="5dp" >
+    android:layout_margin="5dp"
+    android:background="@drawable/login_background2">
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="157dp"
+        android:layout_marginTop="15dp"
         android:text="SIGN UP"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#F44336" />
+        android:textColor="#FF0000" />
 
     <TextView
         android:id="@+id/textView2"
@@ -21,19 +23,19 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView1"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="3dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="65dp"
         android:text="Enter your name:"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#0099FF" />
+        android:textColor="#000116" />
 
     <EditText
         android:id="@+id/editText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView2"
-        android:layout_marginLeft="34dp"
-        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginBottom="-2dp"
         android:layout_toRightOf="@+id/textView2"
         android:background="#CCCCCC"
         android:ems="10"
@@ -48,19 +50,19 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView1"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="3dp"
-        android:layout_marginTop="61dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="163dp"
         android:text="Enter your student email:"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#0099FF" />
+        android:textColor="#000116" />
 
     <EditText
         android:id="@+id/editText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView3"
-        android:layout_marginLeft="32dp"
-        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginBottom="-2dp"
         android:layout_toRightOf="@+id/textView2"
         android:background="#CCCCCC"
         android:ems="10">
@@ -74,19 +76,19 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView1"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="3dp"
-        android:layout_marginTop="131dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="291dp"
         android:text="Enter your major:"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#0099FF" />
+        android:textColor="#000116" />
 
     <EditText
         android:id="@+id/editText3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView3"
-        android:layout_marginLeft="29dp"
-        android:layout_marginBottom="-51dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginBottom="-108dp"
         android:layout_toRightOf="@+id/textView2"
         android:background="#CCCCCC"
         android:ems="10">
@@ -100,19 +102,19 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView1"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="176dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="381dp"
         android:text="Enter your date of birth(MM/DD/YYYY):"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#0099FF" />
+        android:textColor="#000116" />
 
     <EditText
         android:id="@+id/editText4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView3"
-        android:layout_marginLeft="28dp"
-        android:layout_marginBottom="-137dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginBottom="-241dp"
         android:layout_toRightOf="@+id/textView2"
         android:background="#CCCCCC"
         android:ems="10">
@@ -126,8 +128,8 @@
         android:layout_height="35dp"
         android:layout_below="@+id/textView2"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="89dp"
-        android:layout_marginTop="576dp"
+        android:layout_marginLeft="81dp"
+        android:layout_marginTop="464dp"
         android:background="#0099FF"
         android:text="SUBMIT"
         android:textColor="#FFFFFF" />
